@@ -13,12 +13,12 @@ module reg_pp_8b_en_ar(
   output logic [7:0]  q_o);
   
   // Registro de 8 bits con habilitación y reset asíncrono activo bajo
-  always_ff @(posedge clk_i or negedge rst_n_i) begin
+  always_ff @(posedge clk_i) begin
     if (!rst_n_i) begin
-      q_o <= '0;          // Reset asíncrono
+      q_o <= '0;          // Reset síncrono
     end else if (en_i) begin
-      q_o <= d_i;         // Carga cuando está habilitado
-    end
+      q_o <= d_i;
   end
+end
   
 endmodule
