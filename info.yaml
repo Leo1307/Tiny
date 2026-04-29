@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "mux_prueb"      # Project title
+  title:        "reg_pp_8b_en_ar"      # Project title
   author:       "Leobardo Pérez"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Un mux de 4 entradas"      # One line description of what your project does
+  description:  "Contador de 8 bits de entrada y salida"      # One line description of what your project does
   language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -18,33 +18,33 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
-    - "mux_2to1_4b.sv"
+    - "reg_pp_8b_en_ar.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "a0"
-  ui[1]: "a1"
-  ui[2]: "a2"
-  ui[3]: "a3"
-  ui[4]: "b0"
-  ui[5]: "b1"
-  ui[6]: "b2"
-  ui[7]: "b3"
+  ui[0]: "d0"
+  ui[1]: "d1"
+  ui[2]: "d2"
+  ui[3]: "d3"
+  ui[4]: "d4"
+  ui[5]: "d5"
+  ui[6]: "d6"
+  ui[7]: "d7"
 
   # Outputs
   uo[0]: "q0"
   uo[1]: "q1"
   uo[2]: "q2"
   uo[3]: "q3"
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[4]: "q4"
+  uo[5]: "q5"
+  uo[6]: "q6"
+  uo[7]: "q7"
 
   # Bidirectional pins
-  uio[0]: ""
+  uio[0]: "en"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
