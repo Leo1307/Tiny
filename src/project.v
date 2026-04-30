@@ -26,7 +26,7 @@ module tt_um_example (
     .clk_i    (clk),
     .rst_n_i  (rst_n),
     .d_i      (ui_in[7:0]),
-    .en_i     (uio_in[0]),
+    .en_i     (1'b1),
     .q_o      (uo_out[7:0])
   );
 
