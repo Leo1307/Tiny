@@ -19,14 +19,12 @@ module tt_um_example (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, 1'b0};
 
-  assign uio_oe[0] = 1'b0;
-
 
   reg_pp_8b_en_ar U0(
     .clk_i    (clk),
     .rst_n_i  (rst_n),
     .d_i      (ui_in[7:0]),
-    .en_i     (1'b1),
+    .en_i     (uio_in[0]),
     .q_o      (uo_out[7:0])
   );
 
